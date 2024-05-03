@@ -1,7 +1,3 @@
-resource "google_compute_project_default_network_tier" "default" {
-  network_tier = "PREMIUM"
-}
-
 resource "google_compute_instance" "default" {
   name         = var.machine_name_1
   machine_type = var.machine_type
@@ -14,7 +10,9 @@ resource "google_compute_instance" "default" {
   }
 
   network_interface {
-    network = "default"
+    access_config {
+      network_tier = "PREMIUM"
+    }
   }
 
 }
@@ -31,7 +29,9 @@ resource "google_compute_instance" "baba" {
   }
 
   network_interface {
-    network = "default"
+    access_config {
+      network_tier = "STANDARD"
+    }
   }
 
 }

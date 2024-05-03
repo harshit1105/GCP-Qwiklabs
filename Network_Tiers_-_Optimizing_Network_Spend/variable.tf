@@ -1,29 +1,29 @@
 variable "my_project" {
-  type = string
+  type        = string
   description = "Project ID to be provided"
 }
 
 variable "my_region" {
-  type = string
+  type        = string
   description = "Region for compute engine"
 }
 
 variable "my_zone" {
-  type = string
+  type        = string
   description = "Zone for compute engine"
 }
 
 variable "machine_name_1" {
-  type = string
+  type        = string
   description = "Machine Name for compute engine"
 }
 
 variable "machine_name_2" {
-  type = string
+  type        = string
   description = "Machine Name for compute engine"
 }
 
 variable "machine_type" {
-  type = string
+  type        = string
   description = "Machine Type for compute engine"
 }
