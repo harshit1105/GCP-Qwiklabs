@@ -10,6 +10,7 @@ resource "google_compute_instance" "default" {
   }
 
   network_interface {
+    network = "default"
     access_config {
       network_tier = "PREMIUM"
     }
@@ -29,6 +30,7 @@ resource "google_compute_instance" "baba" {
   }
 
   network_interface {
+    network = "default"
     access_config {
       network_tier = "STANDARD"
     }
