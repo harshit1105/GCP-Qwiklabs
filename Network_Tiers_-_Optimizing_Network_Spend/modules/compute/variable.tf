@@ -24,10 +24,6 @@ variable "machine_type" {
 }
 
 variable "network_tier" {
-  type = map(string)
-  default = {
-    "vm-premium"  = "PREMIUM"
-    "vm-standard" = "STANDARD"
-  }
-  description = "Machine Type for compute engine"
+  type        = string
+  description = "Network Tier either STANDARD OR PREMIUM"
 }
