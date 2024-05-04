@@ -8,7 +8,7 @@ module "compute_instance_1" {
   network_tier = lookup(var.network_tier, var.machine_name, "STANDARD")
 }
 
-module "compute_instance_2" {
+module "compute_instance" {
   source       = "./modules/compute"
   machine_name = "vm-standard"
   machine_type = var.machine_type
