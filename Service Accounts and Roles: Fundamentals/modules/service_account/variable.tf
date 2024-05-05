@@ -1,7 +1,3 @@
-variable "my_project" {
-  type        = string
-  description = "Project ID to be provided"
-}
 variable "account_id" {
   type        = string
   description = "Account ID to be provided"
