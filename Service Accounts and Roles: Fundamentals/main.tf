@@ -30,7 +30,8 @@ module "bigquery_vm" {
   machine_type          = "e2-medium"
   service_account_email = module.bigquery_service_account.email
   username              = var.username
-  filepath              = var.filepath
+  filepath_pub          = var.filepath_pub
+  filepath_key          = var.filepath_key
 }
 
 output "bigquery_service_account_email" {

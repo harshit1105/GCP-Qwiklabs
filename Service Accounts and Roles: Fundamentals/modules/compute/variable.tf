@@ -28,7 +28,12 @@ variable "username" {
   description = "Define User Name"
 }
 
-variable "filepath" {
+variable "filepath_pub" {
+  type        = string
+  description = "Define Path of File"
+}
+
+variable "filepath_key" {
   type        = string
   description = "Define Path of File"
 }

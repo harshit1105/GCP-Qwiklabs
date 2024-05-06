@@ -21,12 +21,12 @@ resource "google_compute_instance" "vm_instance" {
     scopes = ["https://www.googleapis.com/auth/cloud-platform"]
   }
   metadata = {
-    ssh-keys = "${var.username}:${file("${var.filepath}")}"
+    ssh-keys = "${var.username}:${file("${var.filepath_pub}")}"
   }
   connection {
     type        = "ssh"
     user        = var.username
-    private_key = file("${var.filepath}")
+    private_key = file("${var.filepath_key}")
     host        = self.network_interface[0].access_config[0].nat_ip
   }
   provisioner "remote-exec" {
