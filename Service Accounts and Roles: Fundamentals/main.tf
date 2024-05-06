@@ -29,6 +29,8 @@ module "bigquery_vm" {
   zone                  = var.zone
   machine_type          = "e2-medium"
   service_account_email = module.bigquery_service_account.email
+  username              = var.username
+  filepath              = var.filepath
 }
 
 output "bigquery_service_account_email" {

@@ -23,3 +23,13 @@ variable "service_account_email" {
   description = "Service account email associated with the instance"
 }
 
+variable "username" {
+  type        = string
+  description = "Define User Name"
+}
+
+variable "filepath" {
+  type        = string
+  description = "Define Path of File"
+}
+
