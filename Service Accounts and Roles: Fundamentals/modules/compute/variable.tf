@@ -3,17 +3,12 @@ variable "my_project" {
   description = "Project ID to be provided"
 }
 
-variable "my_region" {
-  type        = string
-  description = "Region for compute engine"
-}
-
-variable "my_zone" {
+variable "zone" {
   type        = string
   description = "Zone for compute engine"
 }
 
-variable "machine_name" {
+variable "name" {
   type        = string
   description = "Machine Name for compute engine"
 }
@@ -22,3 +17,9 @@ variable "machine_type" {
   type        = string
   description = "Machine Type for compute engine"
 }
+
+variable "service_account_email" {
+  type        = string
+  description = "Service account email associated with the instance"
+}
+

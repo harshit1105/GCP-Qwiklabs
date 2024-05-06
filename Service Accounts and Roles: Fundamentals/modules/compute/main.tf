@@ -1,7 +1,7 @@
-resource "google_compute_instance" "default" {
-  name         = var.machine_name
+resource "google_compute_instance" "vm_instance" {
+  name         = var.name
   machine_type = var.machine_type
-  zone         = var.my_zone
+  zone         = var.zone
 
   boot_disk {
     initialize_params {
@@ -11,6 +11,17 @@ resource "google_compute_instance" "default" {
 
   network_interface {
     network = "default"
+    access_config {
+      // Ephemeral IP
+    }
   }
 
+  service_account {
+    email = var.service_account_email
+    scopes = ["https://www.googleapis.com/auth/cloud-platform"]
+  }
+}
+
+output "instance_name" {
+  value = google_compute_instance.vm_instance.name
 }
