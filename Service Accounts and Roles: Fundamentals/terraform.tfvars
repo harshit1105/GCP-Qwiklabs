@@ -1,5 +1,5 @@
-my_project   = "aesthetic-vent-418205"                                #Need to update this
-zone         = "asia-south1-a"                                        #Need to update this
-username     = "baba1105"                                             #Need to update this
-filepath_pub = "/Users/harshit.10648324/.ssh/my-google-cloud-key.pub" #Need to update this
-filepath_key = "/Users/harshit.10648324/.ssh/my-google-cloud-key"     #Need to update this
+my_project   = ""                                #Need to update this
+zone         = ""                                        #Need to update this
+username     = ""                                             #Need to update this
+filepath_pub = "" #Need to update this
+filepath_key = ""     #Need to update this
